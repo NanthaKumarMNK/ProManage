@@ -8,9 +8,6 @@ import { format } from 'date-fns';
 import Delete from "../Delete/Delete";
 import Logout from "../Logout/Logout";
 import Email from "../Email/Email";
-import {getAllList} from "../../apis/proManage"
-
-
 
 export default function Dashboard() {
   const [name]=useState(localStorage.getItem("name"))
@@ -19,9 +16,6 @@ export default function Dashboard() {
   const [render,setRender]=useState(true)
   const [selectedFilter, setSelectedFilter] = useState("Today");
 
-//   useEffect(() => {
-    
-// }, [render]);
 const handleRender=()=>{
   setRender(!render)
 }
