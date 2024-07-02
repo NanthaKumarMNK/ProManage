@@ -13,7 +13,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { format, isBefore, parse } from "date-fns";
 
 export default function List(props) {
-  const frontendUrl = import.meta.env.VITE_FRONTEND_URI;
   const navigate = useNavigate();
   const userId = localStorage.getItem("userId");
   const userEmail = localStorage.getItem("userEmail");
@@ -101,14 +100,13 @@ export default function List(props) {
     return isBefore(taskDate, new Date());
   };
   const copyText = (listId) => {
-    const textToCopy = `${frontendUrl}/share/${listId}`;
+    const textToCopy = `https://09nantha10-gmail-com-cuvette-final-evaluation-may.vercel.app/share/${listId}`;
     navigator.clipboard.writeText(textToCopy);
     toast.success("Link copied");
   };
   const [isHovered, setIsHovered] = useState("");
   const [activeHoverId, setActiveHoverId] = useState(null);
 
-  console.log(activeHoverId);
   const handleMouseOver = (taskId, element) => {
     setIsHovered(element);
     setActiveHoverId(taskId);
