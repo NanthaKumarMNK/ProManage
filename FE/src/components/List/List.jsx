@@ -21,7 +21,8 @@ export default function List(props) {
   const [activeTaskId, setActiveTaskId] = useState(null);
   const [toggleArrow, setToggleArrow] = useState({});
   const [list, setList] = useState(null);
-  console.log(list)
+ 
+
   const [update, setUpdate] = useState(true);
 
   const fetchAllList = async (status, date) => {
@@ -103,9 +104,18 @@ export default function List(props) {
     navigator.clipboard.writeText(textToCopy);
     toast.success("Link copied");
   };
+  const [isHovered, setIsHovered] = useState('');
+  const [activeHoverId,setActiveHoverId]=useState(null)
+ 
+console.log(activeHoverId)
+  const handleMouseOver = (taskId,element) => {
+    setIsHovered(element);
+    setActiveHoverId(taskId);
+  };
   
-
-
+  const handleMouseOut = () => {
+    setIsHovered('');
+  };
   return (
     <>
       <ToastContainer position="top-right" autoClose={3000} />
@@ -133,11 +143,25 @@ export default function List(props) {
                 <div className={styles.priority}>
                   <p>
                     <div className={task.priority === "High" ? styles.high : task.priority === "Moderate" ? styles.moderate : styles.low}></div>
-                    <span>{task.priority.toUpperCase()}&nbsp;PRIORITY</span> {task.users[1] && task.users[1]!==userEmail&&<div className={styles.Assignee}>{task.users[1].slice(0,2).toUpperCase()}</div>}
+                    <span>{task.priority.toUpperCase()}&nbsp;PRIORITY</span>
+                     {task.users[1] && task.users[1]!==userEmail&&
+                      <div
+  className={styles.Assignee}
+  onMouseOver={() => handleMouseOver(task._id,'email')}
+  onMouseOut={handleMouseOut}
+>
+  {task.users[1] && task.users[1].slice(0, 2).toUpperCase()}
+</div>}
                   </p>
                   <img onClick={() => handleDotClick(task._id)} src={Dot} alt="dot" />
                 </div>
-                <h1>{task.title}</h1>
+                <h1
+  className={styles.title}
+  onMouseOver={() => handleMouseOver(task._id,'title')}
+  onMouseOut={handleMouseOut}
+>
+  {task?.title && task.title.length>20 ? `${task.title.slice(0, 20)}...`:task.title  }
+</h1>
                 <div className={styles.Checklist}>
                 {Object.keys(task.list).length > 0 && (
                     <p>
@@ -210,8 +234,12 @@ export default function List(props) {
                     Delete
                   </div>
                 </div>
-              <div className={styles.hoverEmail}>{task?.users[1] && task.users[1]}</div>
-                <div className={styles.hoverTitle}>{task?.title && task?.title}</div>
+                <div className={`${styles.hoverEmail} ${task._id===activeHoverId && isHovered === 'email' ? styles.hover :''}`}>
+  {task?.users[1] && task.users[1]}
+</div>
+<div className={`${styles.hoverTitle}  ${task._id===activeHoverId && isHovered === 'title' ? styles.hover :''}`}>
+  {task?.title && task?.title}
+</div>
               </div>
             ))}
         </div>
@@ -219,4 +247,5 @@ export default function List(props) {
     </>
   );
 }
+
 

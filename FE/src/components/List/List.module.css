@@ -59,7 +59,6 @@
   }
   .Assignee{
     background-color: #FFEBEB;
-  
     padding: .15rem;
     display: flex;
     align-items: center;
@@ -75,6 +74,8 @@ letter-spacing: 0.5px;
 text-align: left;
 
   }
+  
+  
   .priority p {display: flex;
   justify-content: center;
 align-items: center;}
@@ -282,24 +283,27 @@ text-align: left;
     .hoverEmail,.hoverTitle{
       position: absolute;
       top: 0rem;
-      left:3%;      
+      left:30%;      
       padding:0 3px;
-      height: 20px;
+      border-radius: 2px;
      z-index: 3;
       background-color: #d0cdcd;
       font-family: Poppins;
       font-size: .625rem;
       font-weight: 500;
       line-height: 21px;
-      text-align: left;
+      text-align: center;
+      display: none;
     }
     .hoverTitle{
       position: absolute;
       top: 2rem;
+      left: 0;
       z-index: 3;
-      display: none;
+     display: none;
     }
-    .task > h1:hover .hoverTitle {
+    
+    .hover {
       display: block;
     }
     .button{
@@ -310,6 +314,7 @@ text-align: left;
       justify-content: space-between;
       align-items: center;
     }
+    
 
     .high{
       background-color: #FF2473;
