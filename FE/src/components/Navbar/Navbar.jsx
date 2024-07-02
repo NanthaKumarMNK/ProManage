@@ -12,7 +12,7 @@ export default function (props) {
   const navigate = useNavigate();
  
   const location = useLocation();
-  const navOption = location.pathname.split("/")[1] || "Dashboard";
+  const navOption = location.pathname.split("/")[1] || "dashboard";
  
   const handleOptionClick = (option) => {
     navigate(`/${option}`);
@@ -25,9 +25,9 @@ export default function (props) {
         <p>Pro&nbsp;Manage</p>
       </div>
       <div className={styles.navOption}>
-        <div className={navOption==="Dashboard"? styles.bg : ''} onClick={() => handleOptionClick("Dashboard")}><img src={Dashboard}/><p>Board</p></div>
-        <div className={navOption==="Analytics"? styles.bg : ''} onClick={() => handleOptionClick("Analytics")}><img src={Analytics}/><p>Analytics</p></div>
-        <div className={navOption==="Settings" ? styles.bg : ''} onClick={() => handleOptionClick("Settings")} ><img src={Settings}/><p>Settings</p></div>
+        <div className={navOption==="dashboard"? styles.bg : ''} onClick={() => handleOptionClick("dashboard")}><img src={Dashboard}/><p>Board</p></div>
+        <div className={navOption==="analytics"? styles.bg : ''} onClick={() => handleOptionClick("analytics")}><img src={Analytics}/><p>Analytics</p></div>
+        <div className={navOption==="settings" ? styles.bg : ''} onClick={() => handleOptionClick("settings")} ><img src={Settings}/><p>Settings</p></div>
       </div> 
        <div onClick={()=>props.handleComponent('Logout')} className={styles.logout}>
         <img src={Logout}/>
