@@ -1,0 +1,174 @@
+/* .QuestionContainer {
+  background-color: #041325;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Question,
+.Completed {
+  width: 69vw;
+  height: 86vh;
+  top: 95px;
+  left: 98px;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Timer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.5vw;
+  height: 9.5%;
+  font-family: Poppins;
+
+  font-weight: 700;
+  line-height: 60px;
+}
+.TimerQuestionNumber {
+  color: #474444;
+}
+.TimerNumber {
+  color: #d60000;
+}
+
+.quizNo {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  height: 70%;
+  flex-direction: column;
+}
+.QuestionName {
+  color: #474444;
+  width: 88%;
+  padding: 0 2%;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 2.4vw;
+  font-family: Poppins;
+  font-weight: 700;
+  line-height: 60px;
+}
+.Options {
+  width: 90%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 3vw;
+}
+.Options div {
+  width: 80%;
+  height: 80%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 52.5px;
+  text-align: center;
+}
+.Options div div {
+  flex-grow: 1;
+  height: 100%;
+}
+.Question button {
+  width: 32%;
+  height: 7%;
+  background-color: #60b84b;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 1.9vw;
+  font-weight: 600;
+  line-height: 45px;
+}
+.Completed h1 {
+  font-family: Poppins;
+  font-size: 2.6vw;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+  color: #474444;
+}
+.Completed img {
+  width: 22vw;
+  height: 22vw;
+  background-size: cover;
+}
+.Completed p {
+  font-family: Poppins;
+  font-size: 3.5vw;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+  color: #474444;
+}
+.Completed p span {
+  color: #60b84b;
+}
+.SelectedOption {
+  border: 5px solid #5076ff;
+}
+@media only screen and (max-width: 425px) {
+  .Question {
+    width: 100%;
+    height: 100%;
+  }
+  .Timer {
+    font-size: 5vw;
+  }
+  .QuestionName {
+    font-size: 6vw;
+    text-align: center;
+    width: 76%;
+  }
+  .Options {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 50%;
+  }
+  .Options div {
+    width: 100%;
+    height: 22%;
+    font-size: 4.5vw;
+  }
+  .Question button {
+    width: 35vw;
+    height: 4vh;
+    font-size: 4vw;
+  }
+  .Completed {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    justify-content: space-around;
+  }
+  .Completed h1 {
+    font-size: 9vw;
+  }
+  .Completed img {
+    width: 75vw;
+    height: 75vw;
+  }
+  .Completed p {
+    font-size: 10.2vw;
+  }
+} */

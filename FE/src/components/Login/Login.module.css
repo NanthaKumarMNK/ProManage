@@ -1,0 +1,104 @@
+.LoginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Login{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 34vw;
+  height: 100vh;
+}
+.Login h1{
+font-size: 2rem;
+font-weight: 600;
+line-height: 45.04px;
+text-align: center;
+color: #343434;
+margin-bottom: 1rem;
+
+}
+.Login form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -2rem;
+}
+.Login form div{
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.Login input{
+  width: 60%;
+  height: 3.4375rem;
+  border: .0862rem solid #D0D0D0;
+  border-radius: .6875rem;
+  background-color: white;
+ 
+  padding: 0 10%;
+
+font-size: 19.2px;
+font-weight: 400;
+line-height: 26.28px;
+text-align: left;
+color: #828282;
+}
+
+.Login form .img{
+  width: 2.0625rem;
+  height: 2.0625rem;
+  position: absolute;
+  left: 12%;
+  top:19%;
+}
+.Login form .Eye{
+  width: 2.0625rem;
+  height: 2.0625rem;
+  position: absolute;
+  left: 82%;
+  top:19%;
+}
+.Btn,.Btn1{
+  width: 80%;
+  border: .0869rem solid #17A2B8;
+  background-color:#17A2B8 ;
+  height: 3.4375rem;
+  border-radius: 3.4375rem;
+font-size: 1.2056rem;
+font-weight: 400;
+line-height: 26.28px;
+text-align: center;
+
+}
+.Login p{
+font-size: 19.29px;
+font-weight: 400;
+line-height: 26.28px;
+text-align: center;
+color: #828282;
+margin-top: -2rem;
+}
+.Login span{
+  font-size: .875rem;
+  font-family: Inter;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0.5px;
+text-align: left;
+color: #DB371F;
+width: 78%;
+margin-top: -.7rem;
+}
+
+.Btn1{
+  background-color: white;
+  color: #17A2B8;
+  border: .0869rem solid #17A2B8;
+  margin-top: -3rem;
+}

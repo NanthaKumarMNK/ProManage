@@ -1,0 +1,39 @@
+.HomeContainer {
+
+  width:66vw;
+  height: 100vh;
+  background-color: #17A2B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.img{
+  border-radius: 50%;
+  width: 19rem;
+  height: 19rem;
+  background-color: #317F8B;
+  position: relative;
+}
+.img img{
+  width: 16.25rem;
+  height: 19.375rem;
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%,10%);
+}
+
+
+
+.HomeContainer h1{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 66.15px;
+  margin: 3rem 0 -2rem 0;
+  
+}
+p{
+  font-size: 1.1875rem;
+  font-weight: 400;
+  line-height: 66.15px;
+}

@@ -1,0 +1,239 @@
+.ShareContainer{
+    width: 100vw;
+    height: 100vh;
+    
+}
+.heading{
+    width: 100vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.heading img{
+    margin-left: 5rem;
+    margin-right: 1rem;
+}
+
+.status{
+    border: 2px solid #EDF5FE;
+    width: 33.875rem;
+    height: 75vh;
+    margin:auto auto;
+    border-radius: .75rem;
+  }
+
+  .task{
+    width: 80%;
+    padding: 3% 0;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 1.25rem;
+ 
+  height: 94%;
+  position: relative;
+  }
+
+  .priority{
+    display: flex;
+    align-items: start;
+    justify-content:start ;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .priority div {display: flex;}
+  .priority div div{
+    width: .5625rem;
+    height: .5625rem;
+    border-radius: 50%;
+    margin-top: .0938rem;
+  }
+  .priority div span{
+    font-family: Poppins;
+  font-size: .5rem;
+  font-weight: 500;
+  line-height: 12px;
+  text-align: left;
+  color: #000000;
+  margin-left: .5rem;
+  }
+  .task h1{
+    font-family: Poppins;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  color: #000;
+  margin-top: -.5rem;
+  }
+  .Checklist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -.5rem;
+    position: relative;
+  }
+  .Checklist p{
+    color: #000000;
+    font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  text-align: left;
+  }
+  .scroll{
+    max-height: 21rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .List{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .0625rem solid #E2E2E2;
+    border-radius: .75rem;
+    margin-bottom: 1rem;
+  }
+.List p{
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1875rem;
+    text-align: left;
+    width: 75%;
+    color: #000000;
+    }
+  .container {
+    display: flex;
+    position: relative;
+    padding-left: 3.1875rem;
+    margin-bottom: .75rem;
+    cursor: pointer;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: -0.3125rem;
+    left: 0;
+    height: 1.125rem;
+    width: 1.125rem;
+    background-color: white;
+    border:.125rem solid #E2E2E2;
+    border-radius:.375rem;
+    
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #17A2B8;
+    border:none;
+     height: 1.375rem;
+    width: 1.375rem;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: .45rem;
+    top: .2188rem;
+    width: .3rem;
+    height: .5313rem;
+    border: solid white;
+    border-width: 0 .1875rem .1875rem 0;
+    -webkit-transform: rotate(40deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(40deg);
+  }
+  
+ 
+    .button{
+      display: flex;
+      justify-content: start;
+  
+     
+      
+    }
+   
+    .due,.date{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     
+        margin-right: 1rem;
+        
+        background-color: white;
+        font-family: Poppins;
+        font-size: .875rem;
+        font-weight: 500;
+        line-height: .75rem;
+        text-align: left;
+        color: #767575;
+    }
+    .date{
+      background-color: #EEECEC;
+        padding: 0 .625rem;
+        border-radius: .5rem;
+        height: 1.375rem;
+    }
+
+    .high{
+      background-color: #FF2473;
+      color: white;
+  }
+  .moderate{
+      background-color: #18B0FF;
+  }
+  .low,#color{
+      background-color:#63C05B ;
+      
+      
+      color: white;
+  }
+  ::-webkit-scrollbar {
+    width: .625rem;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #9CB7C5; 
+    border-radius: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .status{
+        border: 2px solid #EDF5FE;
+        width: 80vw;
+        border-radius: 1.25rem;
+        margin:auto auto;
+        max-height: 80vh;
+      }
+      .heading{
+        width: 100vw;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .heading img{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+  }
