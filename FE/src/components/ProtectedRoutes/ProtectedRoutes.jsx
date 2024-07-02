@@ -11,6 +11,5 @@ export default function ProtectedRoute(props) {
             setIsLoggedIn(true);
         }
     }, []);
-
-    return <div>{isLoggedIn ? <Component /> : <Navigate to="/dashboard" />}</div>;
+    return <div>{isLoggedIn ? <Component /> : <Navigate to="/dashboard"/>}</div>;
 }

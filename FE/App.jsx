@@ -7,21 +7,21 @@ import SharePage from "./src/pages/SharePage/SharePage";
 import SettingsPage from "./src/pages/SettingsPage/SettingsPage";
 import CreatePage from "./src/pages/Createpage/CreatePage";
 import DeletePage from "./src/pages/DeletePage/DeletePage";
-// import ProtectedRoute from "./components/ProtectedRoutes/ProtectedRoutes";
+import ProtectedRoute from "./src/components/ProtectedRoutes/ProtectedRoutes";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/settings" element={<SettingsPage/>}/>
-          <Route path="/analytics" element={<AnalyticsPage/>}/>
-          <Route path="/dashboard" element={<DashboardPage/>}/>
-          <Route path="/share/:listId" element={<SharePage/>}/>
+          <Route path="/settings" element={<ProtectedRoute Component={SettingsPage}/>}/>
+          <Route path="/analytics" element={<ProtectedRoute Component={AnalyticsPage}/>}/>
+          <Route path="/dashboard" element={<ProtectedRoute Component={DashboardPage}/>}/>
+          <Route path="/share/:listId" element={<ProtectedRoute Component={SharePage}/>}/>
           <Route path="/" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage/>} />
-          <Route path="/create" element={<CreatePage/>} />
-          <Route path="/delete/:listId" element={<DeletePage/>} />
+          <Route path="/create" element={<ProtectedRoute Component={CreatePage} />}/>
+          <Route path="/delete/:listId" element={<ProtectedRoute Component={DeletePage} />}/>
         </Routes>
       </BrowserRouter>
     </>
