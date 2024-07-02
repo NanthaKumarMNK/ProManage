@@ -17,7 +17,7 @@ function App() {
           <Route path="/settings" element={<ProtectedRoute Component={SettingsPage}/>}/>
           <Route path="/analytics" element={<ProtectedRoute Component={AnalyticsPage}/>}/>
           <Route path="/dashboard" element={<ProtectedRoute Component={DashboardPage}/>}/>
-          <Route path="/share/:listId" element={<ProtectedRoute Component={SharePage}/>}/>
+          <Route path="/share/:listId" element={<SharePage/>}/>
           <Route path="/" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage/>} />
           <Route path="/create" element={<ProtectedRoute Component={CreatePage} />}/>
