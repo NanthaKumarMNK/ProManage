@@ -35,7 +35,7 @@ export default function CreateList(props) {
   const [toggleDisplay,setToggleDisplay]=useState(false)
 
   const handleEmail = (element) => {
-    if (userId!==listUserId){
+    if (state && userId!==listUserId){
       toast.info("Only admin can edit assignee")
       return
     }

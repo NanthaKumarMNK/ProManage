@@ -99,6 +99,8 @@ const loginUser = async (req, res, next) => {
 
     res.cookie("token", token, { httpOnly: true });
     res.cookie("userId", userDetails.userId, { httpOnly: true });
+    res.cookie("userEmail", userDetails.userEmail, { httpOnly: true });
+    res.cookie("name", userDetails.name, { httpOnly: true });
 
     res.json({
       message: "User logged in",
